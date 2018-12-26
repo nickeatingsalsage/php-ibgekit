@@ -1,9 +1,7 @@
 <?php
+// use PhpIbgeKit\Src\Kits\Places\StateSearch;
 
-// use PhpIbgeKit\Src\Kits\Places\UfSearch;
-
-// $ufSearch = new UfSearch();
+// $ufSearch = new StateSearch();
 // //echo var_dump($ufSearch->getAll());
 // echo $ufSearch->getOne(12);
-echo "Olá";
-
+echo "Index";
