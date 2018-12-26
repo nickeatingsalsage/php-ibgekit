@@ -6,7 +6,7 @@
         "name": "nickeatingsalsage/php-ibgekit",
         "version": "dev-master",
         "source": {
-          "url": "https://github.com/nickeatingsalsage/ibgekit.git",
+          "url": "https://github.com/nickeatingsalsage/php-ibgekit.git",
           "type": "git",
           "reference": "master"
         }
