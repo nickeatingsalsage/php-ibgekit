@@ -1,12 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lucas
- * Date: 26/12/18
- * Time: 18:35
- */
 
-namespace ibgekit\Src\Utils;
+namespace PhpIbgeKit\Src\Utils;
 
 use ParseError;
 

@@ -3,17 +3,12 @@
     {
       "type": "package",
       "package": {
-        "name": "nickeatingsalsage/ibgekit",
+        "name": "nickeatingsalsage/php-ibgekit",
         "version": "dev-master",
         "source": {
           "url": "https://github.com/nickeatingsalsage/ibgekit.git",
           "type": "git",
           "reference": "master"
-        },
-        "autoload": {
-          "psr-0": {
-            "ibgekit\\DangerZone": "src"
-          }
         }
       }
     }
