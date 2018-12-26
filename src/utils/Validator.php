@@ -1,6 +1,6 @@
 <?php
 
-namespace ibgekit\utils;
+
 
 class Validator
 {

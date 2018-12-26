@@ -6,7 +6,7 @@
  * Time: 18:35
  */
 
-namespace ibgekit\utils;
+namespace ibgekit\Src\Utils;
 
 use ParseError;
 
