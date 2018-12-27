@@ -1,6 +1,6 @@
 <?php
 
-namespace src\utils;
+namespace IbgeKit\src\utils;
 
 class Validator
 {

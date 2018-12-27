@@ -1,8 +1,8 @@
 <?php
 
-namespace src\kits;
+namespace IbgeKit\src\kits;
 
-use PhpIbgeKit\Src\Utils\Json;
+use IbgeKit\src\utils\Json;
 
 class Search
 {

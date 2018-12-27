@@ -1,7 +1,6 @@
 <?php
 
-namespace src\kits;
-
+namespace IbgeKit\src\kits;
 use Exception;
 
 class StateSearch extends Search
