@@ -1,6 +1,6 @@
 {
   "name": "nickeatingsalsage/php-ibgekit",
-  "description": "PHP-IBGEKIT:  é um conjunto de ferramentas para automatização da api do IBGE, mais detalhes desta api podem ser encontrados em https://servicodados.ibge.gov.br/api/docs/..",
+  "description": "PHP-IBGEKIT is a bunch of tools for current IBGE Api, for further details go to https://github.com/nickeatingsalsage/php-ibgekit.",
   "keywords": [
     "IBGE",
     "Brazil",
@@ -14,7 +14,8 @@
     "ibge",
     "api",
     "nick foundation",
-    "stable"
+    "stable",
+    "nick eating salsage foundation"
   ],
   "license": "MIT",
   "support": {

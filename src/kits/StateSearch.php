@@ -57,6 +57,5 @@ class StateSearch extends Search
             return false;
         return true;
     }
-
 }
 
