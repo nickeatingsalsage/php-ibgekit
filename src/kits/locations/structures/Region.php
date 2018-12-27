@@ -16,7 +16,9 @@ use stdClass;
 class Region extends Base
 {
     public $id;
-
+    public $sigla;
+    public $nome;
+    
     /**
      * Region constructor.
      * @param stdClass $class

@@ -4,13 +4,15 @@ namespace IbgeKit\src\kits\locations\structures;
 
 use Exception;
 use IbgeKit\src\kits\locations\locations\structures\Region;
-use IbgeKit\src\kits\locations\Search;
 use src\kits\locations\CountiesSearch;
 use stdClass;
 
 class State extends Base
 {
     public $id;
+    public $sigla;
+    public $nome;
+    public $regiao;
 
     /**
      * State constructor.
