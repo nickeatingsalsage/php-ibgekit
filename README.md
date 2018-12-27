@@ -57,4 +57,5 @@
 ```
 ## Instalação/Installation
 
-> Just run on terminal: composer require nickeatingsalsage/php-ibgekit.
+> Just run on terminal: composer require "nickeatingsalsage/php-ibgekit".
+  Apenas execute no terminal: composer require "nickeatingsalsage/php-ibgekit".
