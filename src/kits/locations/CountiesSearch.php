@@ -1,9 +1,7 @@
 <?php
 
-namespace src\kits\locations;
+namespace IbgeKit\src\kits\locations;
 
-
-use IbgeKit\src\kits\locations\Search;
 use IbgeKit\src\kits\locations\structures\County;
 use IbgeKit\src\kits\locations\structures\State;
 use IbgeKit\src\utils\Route;
@@ -15,7 +13,7 @@ class CountiesSearch extends Search
     /**
      * @param $response
      * @param bool $asArray
-     * @return array|State|mixed|null
+     * @return County[]|County|null
      * @throws \Exception
      */
     protected function parseResponse($response, $asArray = false)
@@ -32,13 +30,13 @@ class CountiesSearch extends Search
 
     /**
      * @param State $state
-     * @return
+     * @return County[]
      * @throws \Exception
      */
     public function getAllByState(State $state)
     {
-        $route = (new Route())
-            ->setUrl('https://servicodados.ibge.gov.br/api/v1/localidades/estados');
+        $route = new Route();
+        $route->setUrl('https://servicodados.ibge.gov.br/api/v1/localidades/estados');
         $route->addParams("/{$state->id}");
         $route->addParams('/municipios');
         $url = $route->getUrl();

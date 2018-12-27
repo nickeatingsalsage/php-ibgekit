@@ -4,9 +4,16 @@ namespace IbgeKit\src\kits\locations\structures;
 
 use Exception;
 use IbgeKit\src\kits\locations\locations\structures\Region;
-use src\kits\locations\CountiesSearch;
+use IbgeKit\src\kits\locations\CountiesSearch;
+use IbgeKit\src\kits\locations\MesoRegionSearch;
+use IbgeKit\src\kits\locations\MicroRegionSearch;
 use stdClass;
 
+/**
+ * Representa estado brasileiro.
+ * Class State
+ * @package IbgeKit\src\kits\locations\structures
+ */
 class State extends Base
 {
     public $id;
@@ -52,6 +59,7 @@ class State extends Base
     }
 
     /**
+     * Obtém região deste estado.
      * @return mixed
      */
     public function getRegion()
@@ -60,13 +68,38 @@ class State extends Base
     }
 
     /**
+     * Obtém todos os munincipíos deste estado.
+     * @return array
      * @throws Exception
      */
-    public function getCounties()
+    public function getAllCounties()
     {
         $countiesSearch = new CountiesSearch();
         $counties = $countiesSearch->getAllByState($this);
 
         return $counties;
+    }
+
+    /**
+     * Obtém todas as micro-regiões deste estado.
+     * @return array
+     * @throws Exception
+     */
+    public function getAllMicroRegions()
+    {
+        $microRegionSearch = new MicroRegionSearch();
+        $microRegions = $microRegionSearch->getAllByState($this);
+        return $microRegions;
+    }
+
+    /**
+     * @return mixed
+     * @throws Exception
+     */
+    public function getAllMesoRegions()
+    {
+        $mesoRegionSearch = new MesoRegionSearch();
+        $mesoRegions = $mesoRegionSearch->getAllByState($this);
+        return $mesoRegions;
     }
 }

@@ -13,12 +13,17 @@ use Exception;
 use IbgeKit\src\kits\locations\structures\Base;
 use stdClass;
 
+/**
+ * Representa região brasileira.
+ * Class Region
+ * @package IbgeKit\src\kits\locations\locations\structures
+ */
 class Region extends Base
 {
     public $id;
     public $sigla;
     public $nome;
-    
+
     /**
      * Region constructor.
      * @param stdClass $class
@@ -33,6 +38,9 @@ class Region extends Base
             throw new Exception('Invalid structure.');
     }
 
+    /**
+     * @return bool
+     */
     private function validate()
     {
         if (isset($this->id, $this->sigla, $this->nome))

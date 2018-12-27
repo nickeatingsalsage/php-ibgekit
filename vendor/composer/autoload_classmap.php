@@ -6,12 +6,16 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'IbgeKit\\src\\kits\\locations\\CountiesSearch' => $baseDir . '/src/kits/locations/CountiesSearch.php',
+    'IbgeKit\\src\\kits\\locations\\MesoRegionSearch' => $baseDir . '/src/kits/locations/MesoRegionSearch.php',
+    'IbgeKit\\src\\kits\\locations\\MicroRegionSearch' => $baseDir . '/src/kits/locations/MicroRegionSearch.php',
     'IbgeKit\\src\\kits\\locations\\Search' => $baseDir . '/src/kits/locations/Search.php',
     'IbgeKit\\src\\kits\\locations\\StateSearch' => $baseDir . '/src/kits/locations/StateSearch.php',
     'IbgeKit\\src\\kits\\locations\\locations\\structures\\Region' => $baseDir . '/src/kits/locations/structures/Region.php',
     'IbgeKit\\src\\kits\\locations\\structures\\Base' => $baseDir . '/src/kits/locations/structures/Base.php',
+    'IbgeKit\\src\\kits\\locations\\structures\\County' => $baseDir . '/src/kits/locations/structures/County.php',
     'IbgeKit\\src\\kits\\locations\\structures\\State' => $baseDir . '/src/kits/locations/structures/State.php',
     'IbgeKit\\src\\utils\\Json' => $baseDir . '/src/utils/Json.php',
-    'IbgeKit\\src\\utils\\Route' => $baseDir . '/src/utils/Route.php,
+    'IbgeKit\\src\\utils\\Route' => $baseDir . '/src/utils/Route.php',
     'IbgeKit\\src\\utils\\Validator' => $baseDir . '/src/utils/Validator.php',
 );

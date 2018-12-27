@@ -5,6 +5,11 @@ namespace IbgeKit\src\kits\locations\structures;
 use Exception;
 use stdClass;
 
+/**
+ * Representa municipio brasileiro.
+ * Class County
+ * @package IbgeKit\src\kits\locations\locations\structures
+ */
 class County extends Base
 {
     public $id;

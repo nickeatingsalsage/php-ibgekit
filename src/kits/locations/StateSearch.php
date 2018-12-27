@@ -32,7 +32,7 @@ class StateSearch extends Search
     /**
      * Obtém lista de estados.
      * @param array $ids Lista com UFS desejadas.
-     * @return array
+     * @return State[]
      * @throws Exception
      */
     public function getAll($ids = [])
@@ -51,7 +51,7 @@ class StateSearch extends Search
     /**
      * Obtém estado por UF.
      * @param $id
-     * @return object|null
+     * @return State|null
      * @throws Exception
      */
     public function getOne($id)
