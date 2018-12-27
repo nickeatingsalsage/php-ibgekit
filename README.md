@@ -13,11 +13,11 @@
 ``` php
     // Realizar consulta em todos os estados.
      
-   <?php   
+   <?php
    
-   use PhpIbgeKit\Src\Kits\StateSearch;
+   require __DIR__ . '/../../vendor/autoload.php';
    
-   $search = new StateSearch();
+   $search = new \IbgeKit\src\kits\StateSearch();
    echo json_encode($search->getAll());
 ```
 ## Installation
