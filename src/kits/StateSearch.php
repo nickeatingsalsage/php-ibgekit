@@ -25,14 +25,7 @@ class StateSearch extends Search
             $url += implode('|', $ids);
         }
 
-        $curl = curl_init();
-        curl_setopt($curl, CURLOPT_URL, $url);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-        $response = curl_exec($curl);
-        curl_close($curl);
-        $response = self::parseResponse($response, true);
-
-        return $response;
+        return $this->sendRequest($url);
     }
 
     /**
@@ -47,14 +40,8 @@ class StateSearch extends Search
             throw new Exception('Invalid id type. It must be integer, ' . gettype($id) . ' given.');
 
         $url = self::$url . "/{$id}";
-        $curl = curl_init();
-        curl_setopt($curl, CURLOPT_URL, $url);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-        $response = curl_exec($curl);
-        curl_close($curl);
-        $response = self::parseResponse($response, false);
-
-        return $response;
+        print_r($url);
+        return $this->sendRequest($url);
     }
 
     /**
@@ -68,5 +55,6 @@ class StateSearch extends Search
         $response = $this->getOne($id);
         return !empty($response);
     }
+
 }
 
