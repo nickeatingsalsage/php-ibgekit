@@ -1,16 +1,23 @@
 {
-  "repositories": [
-    {
-      "type": "package",
-      "package": {
-        "name": "nickeatingsalsage/php-ibgekit",
-        "version": "dev-master",
-        "source": {
-          "url": "https://github.com/nickeatingsalsage/php-ibgekit.git",
-          "type": "git",
-          "reference": "master"
-        }
-      }
-    }
-  ]
+  "name": "nickeatingsalsage/php-ibgekit\n",
+  "description": "PHP-IBGEKIT:  é um conjunto de ferramentas para automatização da api do IBGE, mais detalhes desta api podem ser encontrados em https://servicodados.ibge.gov.br/api/docs/..",
+  "keywords": [
+    "IBGE",
+    "Brazil",
+    "Open-Source",
+    "Api",
+    "php",
+    "PHP-IBGE"
+  ],
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/nickeatingsalsage/php-ibgekit/issues",
+  },
+  "require": {
+    "php": ">=5.4.0"
+
+  },
+  "require-dev": {
+    "php": ">=5.4.0"
+  }
 }
