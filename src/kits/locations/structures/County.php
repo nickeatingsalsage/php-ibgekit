@@ -13,7 +13,7 @@ use stdClass;
 class County extends Base
 {
     public $id;
-    public $name;
+    public $nome;
     public $microrregiao;
 
     /**
