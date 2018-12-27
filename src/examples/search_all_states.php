@@ -1,8 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../kits/StateSearch.php';
+require __DIR__ . '/../../vendor/autoload.php';
 
-use PhpIbgeKit\Src\Kits\StateSearch;
-
-$search = new StateSearch();
+$search = new \src\kits\Search();
 echo json_encode($search->getAll());

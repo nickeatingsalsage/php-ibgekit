@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpIbgeKit\Src\Base\Search;
+namespace src\kits;
 
 use PhpIbgeKit\Src\Utils\Json;
 

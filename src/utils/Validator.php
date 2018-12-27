@@ -1,8 +1,6 @@
 <?php
 
-namespace PhpIbgeKit\Src\Utils;
-
-use Exception;
+namespace src\utils;
 
 class Validator
 {

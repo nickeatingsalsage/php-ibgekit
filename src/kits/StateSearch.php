@@ -1,10 +1,8 @@
 <?php
 
-namespace PhpIbgeKit\Src\Kits;
+namespace src\kits;
 
 use Exception;
-use PhpIbgeKit\Src\Base\Search\Search;
-use PhpIbgeKit\Src\Utils\Validator;
 
 class StateSearch extends Search
 {

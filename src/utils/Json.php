@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpIbgeKit\Src\Utils;
+namespace src\utils;
 
 use ParseError;
 
