@@ -53,7 +53,9 @@ class StateSearch extends Search
     public function exists($id)
     {
         $response = $this->getOne($id);
-        return !empty($response);
+        if (is_null($response))
+            return false;
+        return true;
     }
 
 }

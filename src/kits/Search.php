@@ -35,9 +35,8 @@ class Search
         $httpCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
         curl_close($curl);
         if ($httpCode !== 200)
-            throw new Exception("It was not possible to fetch date from: \"{$url}\", it ended with HTTP_CODE: {$httpCode}.");
-        if (!Validator::isJson($url))
-            $response = self::parseResponse($response, false);
+            throw new Exception("It was not possible to fetch data from: \"{$url}\", it ended with HTTP_CODE: {$httpCode}.");
+        $response = self::parseResponse($response, false);
 
         return $response;
     }
