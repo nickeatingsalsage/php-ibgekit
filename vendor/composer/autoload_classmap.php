@@ -6,8 +6,12 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'IbgeKit\\src\\kits\\Search' => $baseDir . '/src/kits/Search.php',
-    'IbgeKit\\src\\kits\\StateSearch' => $baseDir . '/src/kits/StateSearch.php',
+    'IbgeKit\\src\\kits\\locations\\Search' => $baseDir . '/src/kits/locations/Search.php',
+    'IbgeKit\\src\\kits\\locations\\StateSearch' => $baseDir . '/src/kits/locations/StateSearch.php',
+    'IbgeKit\\src\\kits\\locations\\locations\\structures\\Region' => $baseDir . '/src/kits/locations/structures/Region.php',
+    'IbgeKit\\src\\kits\\locations\\structures\\Base' => $baseDir . '/src/kits/locations/structures/Base.php',
+    'IbgeKit\\src\\kits\\locations\\structures\\State' => $baseDir . '/src/kits/locations/structures/State.php',
     'IbgeKit\\src\\utils\\Json' => $baseDir . '/src/utils/Json.php',
+    'IbgeKit\\src\\utils\\Router' => $baseDir . '/src/utils/Router.php',
     'IbgeKit\\src\\utils\\Validator' => $baseDir . '/src/utils/Validator.php',
 );

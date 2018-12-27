@@ -51,4 +51,31 @@ class Validator
         }
         return false;
     }
+
+    /**
+     * Verifica se é uma string válida e não vazia.
+     * @param $string
+     * @return bool
+     */
+    public static function isValidString($string)
+    {
+        if (is_string($string))
+            if (!empty($string))
+                return true;
+        return false;
+    }
+
+    /**
+     * Verifica se é uma url válida.
+     * @param $url
+     * @return bool
+     */
+    public static function isValidUrl($url)
+    {
+        if (self::isValidString($url)) {
+            if (filter_var($url, FILTER_VALIDATE_URL))
+                return true;
+        }
+        return false;
+    }
 }
