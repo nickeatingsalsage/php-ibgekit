@@ -6,4 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'IbgeKit\\src\\kits\\Search' => $baseDir . '/src/kits/Search.php',
+    'IbgeKit\\src\\kits\\StateSearch' => $baseDir . '/src/kits/StateSearch.php',
+    'IbgeKit\\src\\utils\\Json' => $baseDir . '/src/utils/Json.php',
+    'IbgeKit\\src\\utils\\Validator' => $baseDir . '/src/utils/Validator.php',
 );

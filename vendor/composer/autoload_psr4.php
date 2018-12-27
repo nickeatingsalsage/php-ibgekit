@@ -6,6 +6,4 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Utils\\' => array($baseDir . '/src/utils'),
-    'Kits\\' => array($baseDir . '/src/kits'),
 );
