@@ -1,6 +1,7 @@
 <?php
 
 namespace IbgeKit\src\kits;
+
 use Exception;
 use IbgeKit\src\utils\Validator;
 

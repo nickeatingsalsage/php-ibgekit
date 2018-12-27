@@ -14,6 +14,7 @@ class Search
      */
     public static function parseResponse($response, $asArray = false)
     {
+        echo var_dump($response);
         $response = Json::decode($response);
         if ($asArray) {
             if (gettype($response) === 'object')
