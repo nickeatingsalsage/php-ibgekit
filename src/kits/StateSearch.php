@@ -40,7 +40,7 @@ class StateSearch extends Search
             throw new Exception('Invalid id type. It must be integer, ' . gettype($id) . ' given.');
 
         $url = self::$url . "/{$id}";
-        print_r($url);
+
         return $this->sendRequest($url);
     }
 

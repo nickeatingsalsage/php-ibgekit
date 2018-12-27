@@ -2,7 +2,9 @@
 
 namespace IbgeKit\src\kits;
 
+use Exception;
 use IbgeKit\src\utils\Json;
+use IbgeKit\src\utils\Validator;
 
 class Search
 {
@@ -14,7 +16,6 @@ class Search
      */
     public static function parseResponse($response, $asArray = false)
     {
-        echo var_dump($response);
         $response = Json::decode($response);
         if ($asArray) {
             if (gettype($response) === 'object')
@@ -25,13 +26,18 @@ class Search
         return $response;
     }
 
-    public function sendRequest($url){
+    public function sendRequest($url)
+    {
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         $response = curl_exec($curl);
+        $httpCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
         curl_close($curl);
-        $response = self::parseResponse($response, false);
+        if ($httpCode !== 200)
+            throw new Exception("It was not possible to fetch date from: \"{$url}\", it ended with HTTP_CODE: {$httpCode}.");
+        if (!Validator::isJson($url))
+            $response = self::parseResponse($response, false);
 
         return $response;
     }

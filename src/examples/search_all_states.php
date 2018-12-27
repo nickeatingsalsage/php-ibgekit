@@ -3,4 +3,4 @@
 require __DIR__ . '/../../vendor/autoload.php';
 
 $search = new \IbgeKit\src\kits\StateSearch();
-echo json_encode($search->getAll());
+echo var_dump($search->getAll());
