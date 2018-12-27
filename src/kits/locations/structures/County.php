@@ -1,19 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lucas
- * Date: 27/12/18
- * Time: 02:54
- */
 
-namespace IbgeKit\src\kits\locations\locations\structures;
-
+namespace IbgeKit\src\kits\locations\structures;
 
 use Exception;
-use IbgeKit\src\kits\locations\structures\Base;
 use stdClass;
 
-class Region extends Base
+class County extends Base
 {
     public $id;
 
@@ -31,20 +23,24 @@ class Region extends Base
             throw new Exception('Invalid structure.');
     }
 
+    /**
+     * @return bool
+     */
     private function validate()
     {
-        if (isset($this->id, $this->sigla, $this->nome))
+        if (isset($this->id, $this->nome, $this->microrregiao))
             return true;
         return false;
     }
 
     /**
      * @param stdClass $class
-     * @return Region
+     * @return County
      * @throws Exception
      */
     public static function createInstanceFromStdClass(stdClass $class)
     {
-        return new Region($class);
+        return new County($class);
     }
+
 }

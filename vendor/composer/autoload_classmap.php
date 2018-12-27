@@ -12,6 +12,6 @@ return array(
     'IbgeKit\\src\\kits\\locations\\structures\\Base' => $baseDir . '/src/kits/locations/structures/Base.php',
     'IbgeKit\\src\\kits\\locations\\structures\\State' => $baseDir . '/src/kits/locations/structures/State.php',
     'IbgeKit\\src\\utils\\Json' => $baseDir . '/src/utils/Json.php',
-    'IbgeKit\\src\\utils\\Router' => $baseDir . '/src/utils/Router.php',
+    'IbgeKit\\src\\utils\\Route' => $baseDir . '/src/utils/Route.php,
     'IbgeKit\\src\\utils\\Validator' => $baseDir . '/src/utils/Validator.php',
 );

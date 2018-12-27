@@ -5,12 +5,20 @@ namespace IbgeKit\src\kits\locations;
 use Exception;
 use IbgeKit\src\utils\Json;
 use IbgeKit\src\utils\Validator;
-use IbgeKit\src\utils\Router;
+use IbgeKit\src\utils\Route;
 
 class Search
 {
+    /**
+     * Base url for fetch.
+     * @var string
+     */
     public $baseUrl;
-    protected $route;
+    /**
+     * Route class for creating urls.
+     * @var $defaultRoute Route
+     */
+    protected $defaultRoute;
 
     /**
      * Search constructor.
@@ -18,7 +26,7 @@ class Search
      */
     public function __construct()
     {
-        $this->route = $this->createRouterInstance();
+        $this->defaultRoute = $this->createRouterInstance();
     }
 
     /**
@@ -59,8 +67,8 @@ class Search
     }
 
     /**
-     * Cria uma instancia do Router.
-     * @return Router
+     * Cria uma instancia do Route.
+     * @return Route
      * @throws Exception
      */
     protected function createRouterInstance()
@@ -68,8 +76,8 @@ class Search
         if (!empty($this->baseUrl)) {
             if (!Validator::isValidString($this->baseUrl))
                 throw new Exception("Invalid baseUrl. It must be a string,  " . gettype($this->baseUrl) . ' given.');
-            return new Router($this->baseUrl);
+            return new Route($this->baseUrl);
         } else
-            return new Router();
+            return new Route();
     }
 }

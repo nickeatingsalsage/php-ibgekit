@@ -9,15 +9,6 @@ use stdClass;
 
 class StateSearch extends Search
 {
-    /**
-     * Router class for creating urls.
-     * @var $route Router
-     */
-    protected $route;
-    /**
-     * Base url for fetch.
-     * @var string
-     */
     public $baseUrl = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados';
 
     /**
@@ -46,7 +37,7 @@ class StateSearch extends Search
      */
     public function getAll($ids = [])
     {
-        $url = $this->route->getUrl();
+        $url = $this->defaultRoute->getUrl();
         if (!empty($ids)) {
             if (!Validator::isValidIdArray($ids))
                 throw new Exception('Invalid ids list. Make sure it contains only valid integers inside it , ' . gettype($ids) . ' given.');
@@ -67,10 +58,11 @@ class StateSearch extends Search
     {
         if (!Validator::isInteger($id))
             throw new Exception('Invalid id type. It must be integer, ' . gettype($id) . ' given.');
-        $url = $this->route->getUrl() . "/{$id}";
+        $url = $this->defaultRoute->getUrl() . "/{$id}";
 
         return $this->parseResponse($this->fetch($url), false);
     }
+
 
     /**
      * Verifica se determinado estado existe.

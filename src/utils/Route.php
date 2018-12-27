@@ -5,12 +5,12 @@ namespace IbgeKit\src\utils;
 
 use Exception;
 
-class Router
+class Route
 {
     private $url = '';
 
     /**
-     * Router constructor.
+     * Route constructor.
      * @param string $url
      * @throws Exception
      */
@@ -70,14 +70,14 @@ class Router
     }
 
     /**
-     * Creates a copy of Object Router.
-     * @param Router $router
-     * @return Router
+     * Creates a copy of Object Route.
+     * @param Route $router
+     * @return Route
      * @throws Exception
      */
-    public static function createFromInstance(Router $router)
+    public static function createFromInstance(Route $router)
     {
-        return new Router($router->getUrl());
+        return new Route($router->getUrl());
     }
 }
 

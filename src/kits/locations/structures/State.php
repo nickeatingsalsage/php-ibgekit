@@ -4,10 +4,14 @@ namespace IbgeKit\src\kits\locations\structures;
 
 use Exception;
 use IbgeKit\src\kits\locations\locations\structures\Region;
+use IbgeKit\src\kits\locations\Search;
+use src\kits\locations\CountiesSearch;
 use stdClass;
 
 class State extends Base
 {
+    public $id;
+
     /**
      * State constructor.
      * @param stdClass $class
@@ -51,5 +55,16 @@ class State extends Base
     public function getRegion()
     {
         return $this->regiao;
+    }
+
+    /**
+     * @throws Exception
+     */
+    public function getCounties()
+    {
+        $countiesSearch = new CountiesSearch();
+        $counties = $countiesSearch->getAllByState($this);
+
+        return $counties;
     }
 }
