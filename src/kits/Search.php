@@ -14,7 +14,7 @@ class Search
      * @param bool $asArray
      * @return mixed|null
      */
-    public static function parseResponse($response, $asArray = false)
+    protected static function parseResponse($response, $asArray = false)
     {
         $response = Json::decode($response);
         if ($asArray) {
@@ -26,7 +26,7 @@ class Search
         return $response;
     }
 
-    public function sendRequest($url)
+    protected function sendRequest($url)
     {
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $url);
